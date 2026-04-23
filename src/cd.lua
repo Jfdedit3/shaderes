@@ -1,5 +1,5 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
-	Title = "z4trox shader", 
+	Title = "z4trox shaders", 
 	Text = "please wait", 
 	Icon = ""
 })

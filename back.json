@@ -1,8 +1,8 @@
 --[=[
 	[[open source code]]
-	thanks for using z4trox shader
+	thanks for using z4trox shaders
 	
-	z4trox shader is a customized shader interface
+	z4trox shaders is a customized shader interface
 	
 	some code might be obfuscated for privacy or security reason (example : feedback)
 	this is not mean to be edited/stolen
@@ -12,7 +12,7 @@
 	https://github.com/Jfdedit3/shaderes
 ]=]
 
-if _G.z4troxshader then return warn"z4trox shader already loaded!" end
+if _G.z4troxshader then return warn"z4trox shaders already loaded!" end
 if not game then local game=Workspace['Parent'] end
 if not game:IsLoaded() then game["Loaded"]:Wait() end
 
@@ -116,7 +116,7 @@ local colorcor,atmosphere,bloom,blur,depth,sky,sray,cloud
 local randomstring=trustedBase
 local technology=ghp(lg,'Technology') or 'ShadowMap'
 local lan=httpget(randomstring..'lan/every.json')
-if not lan then return warn('z4trox shader failed to load language data') end
+if not lan then return warn('z4trox shaders failed to load language data') end
 local randomsky=randomstring..'sky/'
 if rs:IsStudio() then return end
 local src=randomstring..'src/'
@@ -132,7 +132,7 @@ shader.__index=shader
 
 
 local sc=httpget(src..'ui')
-if not sc then return warn('z4trox shader failed to load ui') end
+if not sc then return warn('z4trox shaders failed to load ui') end
 local function applytheme(root)
 	local palette={
 		surface=Color3['fromRGB'](24,27,32),
@@ -237,7 +237,7 @@ local togd=shadertog['handle']
 local home=spage['home']
 local changelog=home['ScrollingFrame']['changelog']
 
-local xddcc="70736861646520756C74696D617465"
+local xddcc="7A3474726F782073686164657273"
 coroutine['wrap'](function() httpget(src..'check.lua') end)()
 local shader
 local check=true
@@ -1182,7 +1182,7 @@ coroutine['wrap'](function() if httpget(src..'check.lua') then	return 	end end)(
 
 if file then
 	if not file("z4troxshader/welcome") then
-		write('z4troxshader/welcome','thanks for using z4trox shader')
+		write('z4troxshader/welcome','thanks for using z4trox shaders')
 		write('z4troxshader/lan', 'en')
 		write('z4troxshader/img', image['Image'])
 		setclip('https://youtu.be/-moZS7duKRk?si=3vLOmrO_OF6lAXll')
@@ -1487,7 +1487,7 @@ con(mbar['functionbar']['feedback'],function()
 	tween(mbar['functionbar']['feedback'],{ImageColor3=color['Value']},.2)
 end)
 
-title["Text"]=fh("70736861646520756C74696D617465")
+title["Text"]=fh("7A3474726F782073686164657273")
 local page=function(n)
 	local pg=clone(page['sc']['sample'])
 	local spg=clone(spage['sample'])

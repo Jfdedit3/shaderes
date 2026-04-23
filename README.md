@@ -1,6 +1,6 @@
-# Z4trox Shader
+# Z4trox Shaders
 
-Version modifiee de Z4trox Shader avec une interface retravaillee et un chargement plus prudent.
+Version modifiee de Z4trox Shaders avec une interface retravaillee et un chargement plus prudent.
 
 ## Changements
 

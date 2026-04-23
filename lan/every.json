@@ -1,6 +1,6 @@
 return {
 	en={
-		['welcome']='welcome to Z4trox Shader',
+		['welcome']='welcome to Z4trox Shaders',
 		['shader']='shaders',
 		['shaderlite']='shaders lite',
 		['shadercolorlite']='shaders color lite',
@@ -57,7 +57,7 @@ return {
 		['background image theme']='background image theme'
 	},
 	es={
-		['welcome']='bienvenido a Z4trox Shader',
+		['welcome']='bienvenido a Z4trox Shaders',
 		['shader']='sombras',
 		['shaderlite']='sombras ligeras',
 		['shadercolorlite']='sombras de color ligeras',
@@ -113,7 +113,7 @@ return {
 		['background image theme']='tema de imagen de fondo'
 	},
 	id={
-		['welcome']='selamat datang di Z4trox Shader',
+		['welcome']='selamat datang di Z4trox Shaders',
 		['shader']='shader',
 		['shaderlite']='shader ringan',
 		['shadercolorlite']='shader warna ringan',
@@ -169,7 +169,7 @@ return {
 		['background image theme']='tema gambar latar'
 	},
 	ar={
-		['welcome']='Ù…Ø±Ø­Ø¨Ù‹Ø§ Ø¨Ùƒ ÙÙŠ Z4trox Shader',
+		['welcome']='Ù…Ø±Ø­Ø¨Ù‹Ø§ Ø¨Ùƒ ÙÙŠ Z4trox Shaders',
 		['shader']='Ø§Ù„Ø¸Ù„',
 		['shaderlite']='Ø¸Ù„ Ø®ÙÙŠÙ',
 		['shadercolorlite']='Ø¸Ù„ Ù„ÙˆÙ† Ø®ÙÙŠÙ',
@@ -225,7 +225,7 @@ return {
 		['background image theme']='Ø³Ù…Ø© ØµÙˆØ±Ø© Ø§Ù„Ø®Ù„ÙÙŠØ©'
 	},
 	ms={
-		['welcome']='selamat datang ke Z4trox Shader',
+		['welcome']='selamat datang ke Z4trox Shaders',
 		['shader']='bayang-bayang',
 		['shaderlite']='bayang-bayang ringan',
 		['shadercolorlite']='bayang warna ringan',
@@ -281,7 +281,7 @@ return {
 		['background image theme']='tema imej latar'
 	},
 	ru={
-		['welcome']='Ð´Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Z4trox Shader',
+		['welcome']='Ð´Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Z4trox Shaders',
 		['shader']='ÑˆÐµÐ¹Ð´ÐµÑ€Ñ‹',
 		['shaderlite']='Ð¾Ð±Ð»ÐµÐ³Ñ‡Ñ‘Ð½Ð½Ñ‹Ðµ ÑˆÐµÐ¹Ð´ÐµÑ€Ñ‹',
 		['shadercolorlite']='Ð¾Ð±Ð»ÐµÐ³Ñ‡Ñ‘Ð½Ð½Ñ‹Ðµ Ñ†Ð²ÐµÑ‚Ð½Ñ‹Ðµ ÑˆÐµÐ¹Ð´ÐµÑ€Ñ‹',
@@ -337,7 +337,7 @@ return {
 		['background image theme']='Ñ‚ÐµÐ¼Ð° Ñ„Ð¾Ð½Ð¾Ð²Ð¾Ð³Ð¾ Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ'
 	},
 	th={
-		['welcome']='à¸¢à¸´à¸™à¸”à¸µà¸•à¹‰à¸­à¸™à¸£à¸±à¸šà¸ªà¸¹à¹ˆ Z4trox Shader',
+		['welcome']='à¸¢à¸´à¸™à¸”à¸µà¸•à¹‰à¸­à¸™à¸£à¸±à¸šà¸ªà¸¹à¹ˆ Z4trox Shaders',
 		['shader']='à¹€à¸Šà¸”à¹€à¸”à¸­à¸£à¹Œ',
 		['shaderlite']='à¹€à¸Šà¸”à¹€à¸”à¸­à¸£à¹Œà¹à¸šà¸šà¹€à¸šà¸²',
 		['shadercolorlite']='à¹€à¸Šà¸”à¹€à¸”à¸­à¸£à¹Œà¸ªà¸µà¹à¸šà¸šà¹€à¸šà¸²',

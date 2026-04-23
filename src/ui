@@ -113,7 +113,7 @@ Z4TROXSHADER["c"]["BackgroundTransparency"] = 1;
 Z4TROXSHADER["c"]["RichText"] = true;
 Z4TROXSHADER["c"]["Size"] = UDim2.new(0.34429, 0, 1, 0);
 Z4TROXSHADER["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-Z4TROXSHADER["c"]["Text"] = [[ z4trox shader]];
+Z4TROXSHADER["c"]["Text"] = [[ z4trox shaders]];
 Z4TROXSHADER["c"]["Name"] = [[maintitle]];
 
 
@@ -599,7 +599,7 @@ Z4TROXSHADER["43"]["BackgroundTransparency"] = 1;
 Z4TROXSHADER["43"]["RichText"] = true;
 Z4TROXSHADER["43"]["Size"] = UDim2.new(0.98164, 0, 0.63497, 0);
 Z4TROXSHADER["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-Z4TROXSHADER["43"]["Text"] = [[welcome to z4trox shader]];
+Z4TROXSHADER["43"]["Text"] = [[welcome to z4trox shaders]];
 Z4TROXSHADER["43"]["LayoutOrder"] = 1;
 Z4TROXSHADER["43"]["Name"] = [[title]];
 Z4TROXSHADER["43"]["Position"] = UDim2.new(0.01845, 0, 0, 0);
@@ -1076,7 +1076,7 @@ Z4TROXSHADER["71"]["Position"] = UDim2.new(0, 0, 0.08136, 0);
 Z4TROXSHADER["71"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 Z4TROXSHADER["71"]["Text"] = [[]];
 Z4TROXSHADER["71"]["BackgroundTransparency"] = 0.5;
-Z4TROXSHADER["71"]["PlaceholderText"] = [[provide feedback with good and clear language and please only provide feedback that is related to z4trox shader]];
+Z4TROXSHADER["71"]["PlaceholderText"] = [[provide feedback with good and clear language and please only provide feedback that is related to z4trox shaders]];
 Z4TROXSHADER["71"]["PlaceholderColor3"] = Color3.fromRGB(25,25,25);
 
 -- StarterGui.newui.mainmage.main.mainpage.showpage.feedback.TextBox.UICorner
@@ -2201,7 +2201,7 @@ Z4TROXSHADER["ed"]["BackgroundTransparency"] = 1;
 Z4TROXSHADER["ed"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 Z4TROXSHADER["ed"]["Size"] = UDim2.new(0.82851, 0, 0.51329, 0);
 Z4TROXSHADER["ed"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-Z4TROXSHADER["ed"]["Text"] = [[welcome to z4trox shader]];
+Z4TROXSHADER["ed"]["Text"] = [[welcome to z4trox shaders]];
 Z4TROXSHADER["ed"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
@@ -2317,7 +2317,7 @@ do
 		Z4TROXSHADER["7"].BackgroundTransparency = 0.08
 	end
 	if Z4TROXSHADER["c"] then
-		Z4TROXSHADER["c"].Text = [[ z4trox shader]]
+		Z4TROXSHADER["c"].Text = [[ z4trox shaders]]
 	end
 	if Z4TROXSHADER["e"] then
 		Z4TROXSHADER["e"].Text = [[]]
