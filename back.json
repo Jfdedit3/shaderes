@@ -94,6 +94,9 @@ local httpget=function(a)
 	if not ok or type(body)~='string' then
 		return warn('failed to download: '..tostring(a))
 	end
+	if string.sub(body,1,3)==string.char(239,187,191) then
+		body=string.sub(body,4)
+	end
 	local chunk,err=loadstring(body)
 	if not chunk then
 		return warn('failed to compile: '..tostring(a)..' - '..tostring(err))
