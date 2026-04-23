@@ -1,4 +1,4 @@
-﻿local Z4TROXSHADER = {};
+local Z4TROXSHADER = {};
 
 -- StarterGui.newui
 Z4TROXSHADER["1"] = Instance.new("ScreenGui");

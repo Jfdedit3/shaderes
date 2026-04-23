@@ -1,4 +1,4 @@
-﻿# Z4trox Shader
+# Z4trox Shader
 
 Version modifiee de Z4trox Shader avec une interface retravaillee et un chargement plus prudent.
 

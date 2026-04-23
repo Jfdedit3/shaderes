@@ -1,4 +1,4 @@
-﻿return {
+return {
 	en={
 		['welcome']='welcome to Z4trox Shader',
 		['shader']='shaders',
