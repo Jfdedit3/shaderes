@@ -1,18 +1,18 @@
 --[=[
 	[[open source code]]
-	thanks for using pshade ultimate
+	thanks for using z4trox shader
 	
-	pshade is made by content creator on youtube called @Im_patrick feel free to subs
+	z4trox shader is a customized shader interface
 	
 	some code might be obfuscated for privacy or security reason (example : feedback)
 	this is not mean to be edited/stolen
 	
 	This script is still in beta stage so make sure to use the loadstring so it can always be updated
 	
-	https://randomstring0.github.io/pshade.github.io/
+	https://github.com/Jfdedit3/shaderes
 ]=]
 
-if _G.pshade then return warn"pshade already loaded!" end
+if _G.z4troxshader then return warn"z4trox shader already loaded!" end
 if not game then local game=Workspace['Parent'] end
 if not game:IsLoaded() then game["Loaded"]:Wait() end
 
@@ -40,7 +40,7 @@ local update = [=[
 	> shader load faster
 ]=]
 
-_G.pshade=true
+_G.z4troxshader=true
 _G.vers="1.4.9"
 local light
 
@@ -85,7 +85,7 @@ local sett1=nil
 local fenv=getfenv()
 local shp=fenv['sethiddenproperty'] or fenv['sethiddenprop'] or fenv['set_hidden_property'] or fenv['set_hidden_prop'] or function() return end
 local ghp=fenv['gethiddenproperty'] or fenv['gethiddenprop'] or function() return end
-local trustedBase='https://raw.githubusercontent.com/randomstring0/pshade-ultimate/refs/heads/main/'
+local trustedBase='https://raw.githubusercontent.com/Jfdedit3/shaderes/refs/heads/main/'
 local httpget=function(a)
 	if type(a)~='string' or string.sub(a,1,#trustedBase)~=trustedBase then
 		return warn('blocked untrusted url: '..tostring(a))
@@ -113,7 +113,7 @@ local colorcor,atmosphere,bloom,blur,depth,sky,sray,cloud
 local randomstring=trustedBase
 local technology=ghp(lg,'Technology') or 'ShadowMap'
 local lan=httpget(randomstring..'lan/every.json')
-if not lan then return warn('pshade failed to load language data') end
+if not lan then return warn('z4trox shader failed to load language data') end
 local randomsky=randomstring..'sky/'
 if rs:IsStudio() then return end
 local src=randomstring..'src/'
@@ -129,7 +129,7 @@ shader.__index=shader
 
 
 local sc=httpget(src..'ui')
-if not sc then return warn('pshade failed to load ui') end
+if not sc then return warn('z4trox shader failed to load ui') end
 local function applytheme(root)
 	local palette={
 		surface=Color3['fromRGB'](24,27,32),
@@ -1178,17 +1178,17 @@ title["Text"]=fh(xddcc)
 coroutine['wrap'](function() if httpget(src..'check.lua') then	return 	end end)()
 
 if file then
-	if not file("pshade/welcome") then
-		write('pshade/welcome','thanks for using pshade ultimate')
-		write('pshade/lan', 'en')
-		write('pshade/img', image['Image'])
+	if not file("z4troxshader/welcome") then
+		write('z4troxshader/welcome','thanks for using z4trox shader')
+		write('z4troxshader/lan', 'en')
+		write('z4troxshader/img', image['Image'])
 		setclip('https://youtu.be/-moZS7duKRk?si=3vLOmrO_OF6lAXll')
 	end
-	if file('pshade/img') then
-		image['Image']=read('pshade/img')
+	if file('z4troxshader/img') then
+		image['Image']=read('z4troxshader/img')
 	end
-	if file('pshade/lan') then
-		language=read('pshade/lan')
+	if file('z4troxshader/lan') then
+		language=read('z4troxshader/lan')
 	end
 	if file('.n') then
 		coroutine['wrap'](function() lp:Kick() end)()
@@ -1812,7 +1812,7 @@ sett:dropdown('gui parent', "coregui", {"playergui",'coregui'}, function(a)
 end)
 
 sett:dropdown(lan[language]['language'], "en (default)", {'en','es','id','ms','th','ar','ru'}, function(a)
-	write("pshade/lan",a)
+	write("z4troxshader/lan",a)
 	notif('re execute the script to apply the language')
 end)
 
@@ -1828,7 +1828,7 @@ sett:dropdown('background', "random", {"shadow",'forrest','mountains','city'}, f
 	elseif a=='city' then
 		image['Image']='rbxassetid://72978449934552'
 	end
-	write('pshade/img',image['Image'])
+	write('z4troxshader/img',image['Image'])
 end)
 
 sett:slider("Image background transparency", 0, 1, function(a)

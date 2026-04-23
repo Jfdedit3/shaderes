@@ -1,6 +1,6 @@
-﻿# Shaderes
+﻿# Z4trox Shader
 
-Version modifiee de PShade Ultimate avec une interface retravaillee et un chargement plus prudent.
+Version modifiee de Z4trox Shader avec une interface retravaillee et un chargement plus prudent.
 
 ## Changements
 
@@ -13,3 +13,4 @@ Version modifiee de PShade Ultimate avec une interface retravaillee et un charge
 ## Notes
 
 Le fichier `back.json` est du Lua Roblox, pas du JSON strict. A tester dans l'environnement Roblox cible avant usage.
+
