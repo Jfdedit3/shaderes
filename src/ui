@@ -2208,40 +2208,64 @@ Z4TROXSHADER["ed"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 do
 	local palette = {
-		surface = Color3.fromRGB(24, 27, 32),
-		panel = Color3.fromRGB(34, 38, 45),
-		panelSoft = Color3.fromRGB(43, 48, 57),
-		control = Color3.fromRGB(52, 58, 68),
-		controlHover = Color3.fromRGB(64, 72, 84),
-		text = Color3.fromRGB(242, 246, 250),
-		muted = Color3.fromRGB(173, 184, 196),
-		accent = Color3.fromRGB(96, 165, 250),
-		stroke = Color3.fromRGB(92, 101, 116),
+		surface = Color3.fromRGB(14, 16, 20),
+		top = Color3.fromRGB(24, 28, 35),
+		panel = Color3.fromRGB(28, 32, 39),
+		panelSoft = Color3.fromRGB(38, 43, 52),
+		control = Color3.fromRGB(43, 49, 59),
+		controlSoft = Color3.fromRGB(50, 57, 68),
+		text = Color3.fromRGB(246, 248, 251),
+		muted = Color3.fromRGB(158, 169, 183),
+		accent = Color3.fromRGB(45, 212, 191),
+		accentTwo = Color3.fromRGB(251, 191, 36),
+		stroke = Color3.fromRGB(78, 91, 109),
 	}
 
 	local font = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Medium, Enum.FontStyle.Normal)
 	local titleFont = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal)
 
+	local function addGradient(obj, first, second, rotation)
+		if not obj or obj:FindFirstChild("z4troxModernGradient") then
+			return
+		end
+		local gradient = Instance.new("UIGradient", obj)
+		gradient.Name = "z4troxModernGradient"
+		gradient.Color = ColorSequence.new(first, second)
+		gradient.Rotation = rotation or 0
+	end
+
+	local function addPadding(obj, left, right)
+		if not obj or obj:FindFirstChild("z4troxModernPadding") then
+			return
+		end
+		local padding = Instance.new("UIPadding", obj)
+		padding.Name = "z4troxModernPadding"
+		padding.PaddingLeft = UDim.new(0, left or 10)
+		padding.PaddingRight = UDim.new(0, right or 10)
+	end
+
 	local mainImage = Z4TROXSHADER["2"]
 	if mainImage then
-		mainImage.ImageTransparency = 0.18
-		mainImage.ImageColor3 = Color3.fromRGB(215, 224, 235)
-		mainImage.Size = UDim2.new(0.68, 0, 0.72, 0)
+		mainImage.ImageTransparency = 0.08
+		mainImage.ImageColor3 = Color3.fromRGB(230, 236, 244)
+		mainImage.Size = UDim2.new(0.7, 0, 0.74, 0)
 	end
 
 	local introImage = Z4TROXSHADER["ea"]
 	if introImage then
-		introImage.ImageTransparency = 0.2
-		introImage.ImageColor3 = Color3.fromRGB(215, 224, 235)
+		introImage.ImageTransparency = 0.1
+		introImage.ImageColor3 = Color3.fromRGB(230, 236, 244)
 	end
 
 	local function styleText(obj)
 		obj.FontFace = font
 		obj.TextColor3 = palette.text
 		obj.TextStrokeTransparency = 1
+		obj.TextTransparency = math.min(obj.TextTransparency, 0.08)
 		if obj:IsA("TextBox") then
 			obj.PlaceholderColor3 = palette.muted
 			obj.ClearTextOnFocus = false
+			addPadding(obj, 12, 12)
 		end
 		if obj.Name == "maintitle" or obj.Name == "title" then
 			obj.FontFace = titleFont
@@ -2249,7 +2273,7 @@ do
 			obj.TextTransparency = 0
 		elseif obj.Name == "secondtitle" then
 			obj.TextColor3 = palette.muted
-			obj.TextTransparency = 0.1
+			obj.TextTransparency = 0.04
 		end
 	end
 
@@ -2265,15 +2289,16 @@ do
 		if obj:IsA("Frame") then
 			if obj.Name == "main" then
 				obj.BackgroundColor3 = palette.surface
-				obj.BackgroundTransparency = 0.08
+				obj.BackgroundTransparency = 0.03
+				addGradient(obj, palette.surface, Color3.fromRGB(23, 28, 34), 90)
 			elseif obj.Name == "Frame" or obj.Name == "showpage" or obj.Name == "addtionframe" then
 				obj.BackgroundColor3 = palette.panel
-				obj.BackgroundTransparency = 0.12
+				obj.BackgroundTransparency = 0.06
 			elseif obj.Name == "functionbar" or obj.Name == "mainbar" then
 				obj.BackgroundTransparency = 1
 			elseif obj.BackgroundTransparency < 1 then
 				obj.BackgroundColor3 = palette.panelSoft
-				obj.BackgroundTransparency = math.max(obj.BackgroundTransparency, 0.08)
+				obj.BackgroundTransparency = math.max(obj.BackgroundTransparency, 0.04)
 			end
 		end
 	end
@@ -2287,12 +2312,12 @@ do
 			if obj:IsA("TextButton") or obj:IsA("ImageButton") then
 				obj.AutoButtonColor = true
 				obj.BackgroundColor3 = palette.control
-				obj.BackgroundTransparency = math.min(obj.BackgroundTransparency, 0.18)
+				obj.BackgroundTransparency = math.min(obj.BackgroundTransparency, 0.08)
 			end
 
 			if obj:IsA("TextBox") then
 				obj.BackgroundColor3 = palette.control
-				obj.BackgroundTransparency = math.min(obj.BackgroundTransparency, 0.18)
+				obj.BackgroundTransparency = math.min(obj.BackgroundTransparency, 0.08)
 			end
 
 			if obj:IsA("ImageButton") and (obj.Name == "minimize" or obj.Name == "feedback" or obj.Name == "setting" or obj.Name == "send") then
@@ -2304,7 +2329,7 @@ do
 			if obj:IsA("UIStroke") then
 				obj.Enabled = true
 				obj.Color = palette.stroke
-				obj.Transparency = 0.55
+				obj.Transparency = 0.38
 				obj.Thickness = 1
 			elseif obj:IsA("UICorner") then
 				obj.CornerRadius = UDim.new(0, 8)
@@ -2313,8 +2338,32 @@ do
 	end
 
 	if Z4TROXSHADER["7"] then
-		Z4TROXSHADER["7"].BackgroundColor3 = palette.panel
-		Z4TROXSHADER["7"].BackgroundTransparency = 0.08
+		Z4TROXSHADER["7"].BackgroundColor3 = palette.top
+		Z4TROXSHADER["7"].BackgroundTransparency = 0.02
+		addGradient(Z4TROXSHADER["7"], palette.top, Color3.fromRGB(31, 37, 47), 0)
+	end
+	if Z4TROXSHADER["20"] then
+		Z4TROXSHADER["20"].BackgroundColor3 = palette.panel
+		Z4TROXSHADER["20"].BackgroundTransparency = 0.02
+	end
+	if Z4TROXSHADER["1d"] then
+		Z4TROXSHADER["1d"].BackgroundColor3 = Color3.fromRGB(19, 22, 27)
+		Z4TROXSHADER["1d"].BackgroundTransparency = 0.04
+	end
+	if Z4TROXSHADER["f"] then
+		Z4TROXSHADER["f"].BackgroundColor3 = palette.controlSoft
+		Z4TROXSHADER["f"].BackgroundTransparency = 0.08
+	end
+	if Z4TROXSHADER["13"] then
+		Z4TROXSHADER["13"].BackgroundColor3 = palette.controlSoft
+	end
+	if Z4TROXSHADER["16"] then
+		Z4TROXSHADER["16"].BackgroundColor3 = palette.accent
+		Z4TROXSHADER["16"].BackgroundTransparency = 0.04
+	end
+	if Z4TROXSHADER["19"] then
+		Z4TROXSHADER["19"].BackgroundColor3 = palette.accentTwo
+		Z4TROXSHADER["19"].BackgroundTransparency = 0.04
 	end
 	if Z4TROXSHADER["c"] then
 		Z4TROXSHADER["c"].Text = [[ z4trox shaders]]
