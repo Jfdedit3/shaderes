@@ -2,6 +2,12 @@
 
 Version modifiee de Z4trox Shaders avec une interface retravaillee et un chargement plus prudent.
 
+## Loadstring
+
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jfdedit3/shaderes/main/back.json"))()
+```
+
 ## Changements
 
 - Theme moderne plus lisible avec surfaces nettes et accents cyan/or.
